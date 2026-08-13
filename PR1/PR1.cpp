@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, h;
+
+    cout << "Enter number of bakery items: ";
+    cin >> n;
+
+    string items[n];
+
+    cout << "Enter the items:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> items[i];
+    }
+
+    cout << "Enter number of hours: ";
+    cin >> h;
+
+    h = h % n;
+
+    cout << "Final display order:\n";
+
+    for (int i = h; i < n; i++)
+    {
+        cout << items[i] << " ";
+    }
+
+    for (int i = 0; i < h; i++)
+    {
+        cout << items[i] << " ";
+    }
+
+    return 0;
+}
